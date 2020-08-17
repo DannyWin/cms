@@ -1,5 +1,6 @@
 import { Context, controller, post, inject, provide } from 'midway';
 import { IUserService } from '../iservice/iuser';
+import * as code from '../common/constant'
 @provide()
 @controller('/login')
 export class LoginController {
@@ -19,7 +20,7 @@ export class LoginController {
       ctx.body = {msg: 'Login successfully', data: {token} };
     }else{
       ctx.status=400;
-      ctx.body={code:'auth:userNotFound', msg: 'Uid or Pwd is wrong'}
+      ctx.body={code:code.auth_userNotFound, msg: 'Uid or Pwd is wrong'}
       //ctx.throw(400,'Uid or Pwd is wrong')
     }
     
