@@ -1,7 +1,6 @@
 import { provide, inject, config, plugin } from 'midway';
 import { ILoginOptions, IUserService } from '../iservice/iuser';
-import { IUser } from '../model/user/user'
-import User from '../model/user/user'
+import User,{ IUser } from '../model/user/user'
 @provide('userService')
 export class UserService implements IUserService {
 

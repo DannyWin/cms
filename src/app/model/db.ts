@@ -28,7 +28,7 @@ export class DB {
             username: config.user,
             password: config.password,
             dialect: config.dialect,
-            repositoryMode: true,
+            //repositoryMode: true,
             // host: config.host,
             // port: config.port,
             // logging: false,
